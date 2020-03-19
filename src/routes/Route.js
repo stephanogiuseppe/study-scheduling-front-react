@@ -20,7 +20,7 @@ const RouteWrapper = ({
   isPrivate,
   ...args
 }) => {
-  const signed = true
+  const signed = false
 
   if (isPrivate && !signed) {
     return <Redirect to="/" />
