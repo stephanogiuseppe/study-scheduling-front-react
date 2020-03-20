@@ -28,6 +28,28 @@ export function * signIn({ payload }) {
   }
 }
 
+function * userSignUp({ name, email, password }) {
+  yield call(api.post, 'users', {
+    name,
+    email,
+    password,
+    provider: true
+  })
+
+  history.push('/')
+}
+
+export function * signUp({ payload }) {
+  try {
+    yield userSignUp(payload)
+    toast.success('Successfully registration')
+  } catch (error) {
+    toast.error('Register failure. Check your credentials')
+    yield put(signFailure())
+  }
+}
+
 export default all([
-  takeLatest('auth/SIGN_IN_REQUEST', signIn)
+  takeLatest('auth/SIGN_IN_REQUEST', signIn),
+  takeLatest('auth/SIGN_UP_REQUEST', signUp)
 ])
