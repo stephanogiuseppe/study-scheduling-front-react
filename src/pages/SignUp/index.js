@@ -1,8 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Form, Input } from '@rocketseat/unform'
+import * as Yup from 'yup'
 
 import logo from '~/assets/logo.svg'
+
+const schema = Yup.object().shape({
+  name: Yup.string().required('Name is required'),
+  email: Yup.string().email('Invalid email').required('Email is required'),
+  password: Yup.string().min(6, 'Minimum 6 characters').required('Password is required'),
+  confirm: Yup.string().min(6, 'Minimum 6 characters').required('Confirm password is required')
+})
 
 const SignUp = () => {
   const handleSubmit = (data) => {
@@ -14,7 +22,7 @@ const SignUp = () => {
 
     <h2>Create Account</h2>
 
-    <Form onSubmit={handleSubmit}>
+    <Form schema={schema} onSubmit={handleSubmit}>
       <Input name="name" type="text " placeholder="Name" />
       <Input name="email" type="email" placeholder="E-mail" />
       <Input name="password" type="password" placeholder="Password" />
