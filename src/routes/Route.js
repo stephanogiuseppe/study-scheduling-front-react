@@ -4,6 +4,7 @@ import { Route, Redirect } from 'react-router-dom'
 
 import AuthLayout from '~/pages/_layouts/auth'
 import DefaultLayout from '~/pages/_layouts/default'
+import store from '~/store'
 
 const renderComponent = (Component, signed, props) => {
   const Layout = signed ? DefaultLayout : AuthLayout
@@ -20,7 +21,7 @@ const RouteWrapper = ({
   isPrivate,
   ...args
 }) => {
-  const signed = false
+  const { signed } = store.getState().auth
 
   if (isPrivate && !signed) {
     return <Redirect to="/" />
