@@ -6,13 +6,29 @@ const INITIAL_STATE = {
 
 const auth = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case 'auth/SIGN_IN_REQUEST': {
+      return {
+        ...state,
+        loading: true
+      }
+    }
+
     case 'auth/SIGN_IN_SUCCESS': {
       return {
         ...state,
         token: action.payload.token,
-        signed: true
+        signed: true,
+        loading: false
       }
     }
+
+    case 'auth/SIGN_FAILURE': {
+      return {
+        ...state,
+        loading: false
+      }
+    }
+
     default:
       return state
   }
