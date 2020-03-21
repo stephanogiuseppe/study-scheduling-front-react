@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import logo from '~/assets/logo-green.svg'
 import { Container, Content, Profile } from './styles'
+import Notifications from '~/components/Notifications'
 
 const Header = () => {
   return (
@@ -14,6 +15,7 @@ const Header = () => {
         </nav>
 
         <aside>
+          <Notifications />
           <Profile>
             <div>
               <strong>Me</strong>
