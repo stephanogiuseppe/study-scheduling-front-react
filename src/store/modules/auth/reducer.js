@@ -29,6 +29,13 @@ const auth = (state = INITIAL_STATE, action) => {
       }
     }
 
+    case 'auth/SIGN_OUT': {
+      return {
+        token: null,
+        signed: false
+      }
+    }
+
     default:
       return state
   }

@@ -51,7 +51,7 @@ export function * signUp({ payload }) {
   }
 }
 
-export function setToken({ payload }) {
+export const setToken = ({ payload }) => {
   if (!payload) {
     return
   }
@@ -63,8 +63,13 @@ export function setToken({ payload }) {
   }
 }
 
+export const signOut = () => {
+  history.push('/')
+}
+
 export default all([
   takeLatest('persist/REHYDRATE', setToken),
   takeLatest('auth/SIGN_IN_REQUEST', signIn),
-  takeLatest('auth/SIGN_UP_REQUEST', signUp)
+  takeLatest('auth/SIGN_UP_REQUEST', signUp),
+  takeLatest('auth/SIGN_OUT', signOut)
 ])

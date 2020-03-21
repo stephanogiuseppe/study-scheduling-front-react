@@ -17,6 +17,12 @@ const user = (state = INITIAL_STATE, action) => {
       }
     }
 
+    case 'auth/SIGN_OUT': {
+      return {
+        profile: null
+      }
+    }
+
     default:
       return state
   }

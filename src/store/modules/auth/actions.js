@@ -1,28 +1,32 @@
-const signInRequest = (email, password) => {
+export const signInRequest = (email, password) => {
   return {
     type: 'auth/SIGN_IN_REQUEST',
     payload: { email, password }
   }
 }
 
-const signInSuccess = (token, user) => {
+export const signInSuccess = (token, user) => {
   return {
     type: 'auth/SIGN_IN_SUCCESS',
     payload: { token, user }
   }
 }
 
-const signUpRequest = (name, email, password) => {
+export const signUpRequest = (name, email, password) => {
   return {
     type: 'auth/SIGN_UP_REQUEST',
     payload: { name, email, password }
   }
 }
 
-const signFailure = () => {
+export const signFailure = () => {
   return {
     type: 'auth/SIGN_FAILURE'
   }
 }
 
-export { signInRequest, signInSuccess, signUpRequest, signFailure }
+export const signOut = () => {
+  return {
+    type: 'auth/SIGN_OUT'
+  }
+}
