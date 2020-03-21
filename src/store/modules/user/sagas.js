@@ -4,9 +4,9 @@ import { toast } from 'react-toastify'
 import api from '~/services/api'
 import { updateProfileSuccess, updateProfileFailure } from './actions'
 
-function * userUpdateProfile({ name, email, ...args }) {
+function * userUpdateProfile({ name, email, avatar_id, ...args }) {
   const profile = Object.assign(
-    { name, email },
+    { name, email, avatar_id },
     args.oldPassword ? args : {}
   )
 
