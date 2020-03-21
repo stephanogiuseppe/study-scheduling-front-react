@@ -10,6 +10,13 @@ const user = (state = INITIAL_STATE, action) => {
         profile: action.payload.user
       }
     }
+
+    case 'user/UPDATE_PROFILE_SUCCESS': {
+      return {
+        profile: action.payload.profile
+      }
+    }
+
     default:
       return state
   }
