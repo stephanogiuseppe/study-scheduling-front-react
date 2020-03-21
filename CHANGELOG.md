@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/stephanogiuseppe/study-scheduling-front-react/compare/v0.0.4...v0.0.5) (2020-03-21)
+
+
+### Features
+
+* **notification:** mark read ([5424d80](https://github.com/stephanogiuseppe/study-scheduling-front-react/commit/5424d80cf4695e44dbd77c5f445474ba17d3f3ce))
+
 ### [0.0.4](https://github.com/stephanogiuseppe/study-scheduling-front-react/compare/v0.0.3...v0.0.4) (2020-03-20)
 
 ### [0.0.3](https://github.com/stephanogiuseppe/study-scheduling-front-react/compare/v0.0.2...v0.0.3) (2020-03-20)
