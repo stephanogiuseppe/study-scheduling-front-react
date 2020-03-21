@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "burkeholland.simple-react-snippets",
+    "eamodio.gitlens",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "EQuimper.react-native-react-redux",
+    "jpoissonnier.vscode-styled-components",
+    "jundat95.react-native-snippet",
+    "liviuschera.noctis",
+    "mikestead.dotenv",
+    "ms-vscode.node-debug2",
+    "ms-vscode.sublime-keybindings",
+    "nikitaKunevich.snippet-creator"
+  ]
+}

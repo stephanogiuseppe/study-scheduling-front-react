@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Launch Angular/Node",
+      "configurations": ["Nodemon", "Angular"]
+    }, {
+      "name": "Debug Angular/Node",
+      "configurations": ["Debug Node: Nodemon", "Angular"]
+    }
+  ],
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "protocol": "inspector",
+      "name": "Attach Program",
+      "skipFiles": ["<node_internals>/**"],
+      "restart": true
+    },
+    {
+      "request": "launch",
+      "name": "Attach Angular to Chrome",
+      "type": "chrome",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}"
+    }
+    {
+      "request": "launch",
+      "name": "Angular",
+      "type": "chrome",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
