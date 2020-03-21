@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/stephanogiuseppe/study-scheduling-front-react/compare/v0.0.6...v0.0.7) (2020-03-21)
+
+
+### Features
+
+* **dashboard:** dashboard page ([2b488c7](https://github.com/stephanogiuseppe/study-scheduling-front-react/commit/2b488c703d6558aeca5ea6a1b6ac3f4ff3610640))
+
+
+### Bug Fixes
+
+* **header:** profile avatar verification ([0a21447](https://github.com/stephanogiuseppe/study-scheduling-front-react/commit/0a214471809d052f7dad690d71044a3da02d0e82))
+
 ### [0.0.6](https://github.com/stephanogiuseppe/study-scheduling-front-react/compare/v0.0.5...v0.0.6) (2020-03-21)
 
 
